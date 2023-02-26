@@ -14,7 +14,7 @@ public class Notification {
 
     @Id
     private ObjectId id;
-    private Long userId;
+    private String userEmail;
     private NotificationType type;
     private Date issueDate;
 }
