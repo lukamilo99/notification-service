@@ -15,17 +15,17 @@ public class NotificationContentFactory {
             case "CONFIRM_REGISTRATION" -> {
                 builder.append(notificationDto.getReceiverFirstname()).append(" ").append(notificationDto.getReceiverLastname())
                         .append(", please confirm registration!\n\n");
-                builder.append(USER_SERVICE_URL).append("/confirm-registration/?token=").append(notificationDto.getToken());
+                builder.append(USER_SERVICE_URL).append("/confirm-registration?token=").append(notificationDto.getToken());
             }
             case "CONFIRM_RESERVATION" -> {
                 builder.append(notificationDto.getReceiverFirstname()).append(" ").append(notificationDto.getReceiverLastname())
                         .append(", please confirm reservation!\n\n");
-                builder.append(RENT_SERVICE_URL).append("/confirm-reservation/?token=").append(notificationDto.getToken());
+                builder.append(RENT_SERVICE_URL).append("/confirm-reservation?token=").append(notificationDto.getToken());
             }
             case "CANCEL_RESERVATION" -> {
                 builder.append(notificationDto.getReceiverFirstname()).append(" ").append(notificationDto.getReceiverLastname())
                         .append(", please confirm cancellation!\n\n");
-                builder.append(RENT_SERVICE_URL).append("/confirm-cancellation/?token=").append(notificationDto.getToken());
+                builder.append(RENT_SERVICE_URL).append("/confirm-cancellation?token=").append(notificationDto.getToken());
             }
         }
         return builder.toString();
