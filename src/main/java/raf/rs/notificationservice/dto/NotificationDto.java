@@ -10,7 +10,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class NotificationDto{
+public class NotificationDto {
 
     @JsonProperty("notificationType")
     private String notificationType;

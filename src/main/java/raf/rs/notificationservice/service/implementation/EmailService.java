@@ -33,7 +33,6 @@ public class EmailService implements NotificationService {
     @RabbitListener(queues = "${spring.rabbitmq.queue}")
     @Override
     public void sendNotification(String userInfo) {
-
         try {
             NotificationDto notificationDto = objectMapper.readValue(userInfo, NotificationDto.class);
             String content = NotificationContentFactory.createNotificationContent(notificationDto);
